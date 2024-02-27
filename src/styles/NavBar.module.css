@@ -3,11 +3,11 @@
     border: 1px solid #dadadf;
 }
 
-.NavLink {
+.NavLink, .Active {
     padding: 5px;
     text-decoration: none;
 }
 
-.active i {
+.Active i {
     color: #2142b2;
 }
