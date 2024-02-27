@@ -11,6 +11,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<h1>Home page</h1>} />
                 <Route path="/signin" element={<h1>Sign in</h1>} />
+                <Route path="/signup" element={<h1>Sign up</h1>} />
+                <Route path="*" element={<p>Page not found!</p>} />
             </Routes>
         </Container>
     </div>
