@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e16a8d9-bb6c-485e-9b98-deab10825171" name="Changes" comment="add active class working">
-      <change afterPath="$PROJECT_DIR$/src/api/axiosDefaults.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/auth/SignUpForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/Button.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/SignInUpForm.module.css" afterDir="false" />
+    <list default="true" id="1e16a8d9-bb6c-485e-9b98-deab10825171" name="Changes" comment="add sign up form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/auth/SignUpForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/auth/SignUpForm.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +83,7 @@
       <updated>1709017006170</updated>
       <workItem from="1709017007765" duration="181000" />
       <workItem from="1709017217372" duration="1754000" />
-      <workItem from="1709019095849" duration="16716000" />
+      <workItem from="1709019095849" duration="16892000" />
     </task>
     <task id="LOCAL-00001" summary="setup">
       <option name="closed" value="true" />
@@ -148,7 +141,15 @@
       <option name="project" value="LOCAL" />
       <updated>1709072784461</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add sign up form">
+      <option name="closed" value="true" />
+      <created>1709452855184</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1709452855184</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +163,7 @@
     <MESSAGE value="add routing" />
     <MESSAGE value="add active class manually" />
     <MESSAGE value="add active class working" />
-    <option name="LAST_COMMIT_MESSAGE" value="add active class working" />
+    <MESSAGE value="add sign up form" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sign up form" />
   </component>
 </project>
