@@ -10,11 +10,23 @@ import {useCurrentUser} from "../contexts/CurrentUserContext";
 const NavBar = () => {
     const currentUser = useCurrentUser();
 
-    const loggedInIcons = <>{currentUser?.username}</>
+    const addPostIcon = (
+        <NavLink to="/posts/create" exact className={({ isActive }) => isActive ? styles.Active : styles.NavLink}><i className="fas fa-plus-square"></i>Add post</NavLink>
+    )
+
+    const loggedInIcons =
+        <>
+            <NavLink to="/feed" exact className={({ isActive }) => isActive ? styles.Active : styles.NavLink}><i className="fas fa-stream"></i>Feed</NavLink>
+            <NavLink to="/liked" exact className={({ isActive }) => isActive ? styles.Active : styles.NavLink}><i className="fas fa-heart"></i>Liked</NavLink>
+            <NavLink to="/" exact className={styles.NavLink} onClick={() => {}}><i className="fas fa-sign-out-alt"></i>Sign out</NavLink>
+            <NavLink to={`/profiles/${currentUser?.profile_id}`} exact className={styles.NavLink}>
+                <img src={currentUser?.profile_image} />
+            </NavLink>
+        </>
     const loggedOutIcons = (
         <>
-            <NavLink to="/signin" exact  className={({ isActive }) => isActive ? styles.Active : styles.NavLink}><i className="fas fa-sign-in-alt"></i> Sign in</NavLink>
-            <NavLink to="/signup" exact  className={({ isActive }) => isActive ? styles.Active : styles.NavLink}><i className="fas fa-user-plus"></i> Sign up</NavLink>
+            <NavLink to="/signin" exact className={({ isActive }) => isActive ? styles.Active : styles.NavLink}><i className="fas fa-sign-in-alt"></i> Sign in</NavLink>
+            <NavLink to="/signup" exact className={({ isActive }) => isActive ? styles.Active : styles.NavLink}><i className="fas fa-user-plus"></i> Sign up</NavLink>
         </>
     )
 
@@ -26,6 +38,7 @@ const NavBar = () => {
                         <img src={logo} alt="logo" height="45" />
                     </Navbar.Brand>
                 </NavLink>
+                {currentUser && addPostIcon}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto text-left">
