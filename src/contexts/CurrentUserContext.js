@@ -11,6 +11,8 @@ export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
 
 export const CurrentUserProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [forceUpdate, setForceUpdate] = useState(false);
     const navigate = useNavigate()
 
     const handleMount = async () => {
@@ -19,12 +21,15 @@ export const CurrentUserProvider = ({ children }) => {
             setCurrentUser(data);
         } catch (err) {
             console.log(err);
+        } finally {
+            setLoading(false);
+            setForceUpdate((prev) => !prev);
         }
     };
 
     useEffect(() => {
         handleMount();
-    }, []);
+    }, [forceUpdate]);
 
     useMemo(() => {
         axiosReq.interceptors.request.use(
@@ -67,6 +72,10 @@ export const CurrentUserProvider = ({ children }) => {
             }
         );
     }, [navigate]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
 
     return (
         <CurrentUserContext.Provider value={currentUser}>

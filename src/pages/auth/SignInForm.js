@@ -17,7 +17,7 @@ import appStyles from "../../App.module.css";
 import {useSetCurrentUser} from "../../contexts/CurrentUserContext";
 
 function SignInForm() {
-    const setCurentUser = useSetCurrentUser();
+  const setCurrentUser = useSetCurrentUser();
 
     const [signInData, setSignInData] = useState({
         username: "",
@@ -32,7 +32,7 @@ function SignInForm() {
         event.preventDefault();
         try {
             const data = await axios.post("/dj-rest-auth/login/", signInData);
-            setCurentUser(data.user)
+            setCurrentUser(data.user)
             navigate("/");
         } catch (err) {
             setErrors(err.response?.data);
